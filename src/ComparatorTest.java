@@ -1,5 +1,3 @@
-package org.example;
-
 import java.time.Period;
 import java.util.Collection;
 import java.util.Collections;
