@@ -22,33 +22,46 @@ public class Person {
             this.givenName = givenName;
             return this;
         }
+
         public Person.Builder surName(String surName) {
             this.surName = surName;
             return this;
         }
+
         public Person.Builder age(int val) {
             age = val;
             return this;
         }
+
         public Person.Builder gender(Gender val) {
             gender = val;
             return this;
         }
+
         public Person.Builder email(String val) {
             eMail = val;
             return this;
         }
+
         public Person.Builder phoneNumber(String val) {
             phone = val;
             return this;
         }
+
         public Person.Builder address(String val) {
             address = val;
             return this;
         }
-        private Person() {
-            super();
+
+        public Person build() {
+            return new Person(this);
         }
+
+    }
+    private Person()
+    {
+        super();
+    }
         private Person(Person.Builder builder) {
             givenName = builder.givenName;
             surName = builder.surName;
@@ -86,7 +99,7 @@ public class Person {
         public String toString() {
             return "Name: " + givenName +" " + surName + "\n" + "Age: " + age + " Gender: " + gender + "\n" + "Address: " + address + "\n";
         }
-    }
+
     public static List<Person> createShortList() {
         List<Person> people = new ArrayList<>();
         people.add(
