@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
+
 public class Person {
     private String givenName;
     private String surName;
@@ -80,6 +82,11 @@ public class Person {
         public int getAge() {
             return age;
         }
+        public String getEmail(){return eMail;}
+        public String getPhone(){return phone;}
+        public String getAddress(){return address;}
+        public Gender getGender(){return gender;}
+
         public void print() {
             System.out.println(
                 "\nName: " + givenName + " " + surName + "\n" +
@@ -90,6 +97,12 @@ public class Person {
                 "Address: " + address + "\n"
             );
         }
+
+        // Dodana funkcja printCustom
+        public String printCustom(Function<Person, String> customFunction) {
+            return customFunction.apply(this);
+        }
+
         public void printName() {
             System.out.println(
                 "Name: " + givenName + " " + surName);
