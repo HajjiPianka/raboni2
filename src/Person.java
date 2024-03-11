@@ -46,5 +46,45 @@ public class Person {
             address = val;
             return this;
         }
+        private Person() {
+            super();
+        }
+        private Person(Person.Builder builder) {
+            givenName = builder.givenName;
+            surName = builder.surName;
+            age = builder.age;
+            gender = builder.gender;
+            eMail = builder.eMail;
+            phone = builder.phone;
+            address = builder.address;
+        }
+        public String getGivenName() {
+            return givenName;
+        }
+        public String getSurName() {
+            return surName;
+        }
+        public int getAge() {
+            return age;
+        }
+        public void print() {
+            System.out.println(
+                "\nName: " + givenName + " " + surName + "\n" +
+                "Age: " + age + "\n" +
+                "Gender: " + gender + "\n" +
+                "eMail: " + eMail + "\n" +
+                "Phone: " + phone + "\n" +
+                "Address: " + address + "\n"
+            );
+        }
+        public void printName() {
+            System.out.println(
+                "Name: " + givenName + " " + surName);
+        }
+
+        @Override
+        public String toString() {
+            return "Name: " + givenName +" " + surName + "\n" + "Age: " + age + " Gender: " + gender + "\n" + "Address: " + address + "\n";
+        }
     }
 }
