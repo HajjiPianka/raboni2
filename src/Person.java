@@ -87,4 +87,40 @@ public class Person {
             return "Name: " + givenName +" " + surName + "\n" + "Age: " + age + " Gender: " + gender + "\n" + "Address: " + address + "\n";
         }
     }
+    public static List<Person> createShortList() {
+        List<Person> people = new ArrayList<>();
+        people.add(
+            new Person.Builder()
+                    .givenName("Li")
+                    .surName("Forrest")
+                    .age(21)
+                    .gender(Gender.MALE)
+                    .email("Li.forrest.baker@example.com")
+                    .phoneNumber("201-121-4678")
+                    .address("44 4th St, Smallville, KS 12333")
+                    .build()
+        );
+        people.add(
+            new Person.Builder()
+                    .givenName("Hubert")
+                    .surName("Burda")
+                    .age(25)
+                    .gender(Gender.FEMALE)
+                    .email("hubert.burda@example.com")
+                    .phoneNumber("202-123-4678")
+                    .address("33 3rd St, Smallville, KS 12333")
+                    .build()
+        );
+        people.add(
+            new Person.Builder()
+                    .givenName("Gsang")
+                    .surName("Ye")
+                    .age(25)
+                    .gender(Gender.MALE)
+                    .email("ye,gang.doe@example.com")
+                    .phoneNumber("202-123-4678")
+                    .address("33 3rd St, Smallville, KS 12333")
+                    .build()
+        );
+    }
 }
