@@ -122,5 +122,29 @@ public class Person {
                     .address("33 3rd St, Smallville, KS 12333")
                     .build()
         );
+        people.add(
+            new Person.Builder()
+                    .givenName("Phil")
+                    .surName("Smith")
+                    .age(55)
+                    .gender(Gender.MALE)
+                    .email("phil.smith@example.com")
+                    .phoneNumber("222-33-1234")
+                    .address("22 2nd St, New Park, CO 222333")
+                    .build()
+        );
+        people.add(
+            new Person.Builder()
+                    .givenName("Warren")
+                    .surName("Buffett")
+                    .age(84)
+                    .gender(Gender.FEMALE)
+                    .email("warren.buffett@example.com")
+                    .phoneNumber("211-33-1234")
+                    .address("22 4th St, New Park, CO 222333")
+                    .build()
+        );
+
+        return people;
     }
 }
